@@ -1,0 +1,27 @@
+.custom-table {
+  border-collapse: collapse;
+  width: 8%;
+  margin: 10px;
+  margin-left: 70px;
+}
+
+.custom-table td {
+  text-align: center;
+  padding: 7px;
+}
+
+.custom-table td button:hover {
+  background-color: #48ff00;
+  color:brown;
+}
+.img {
+  background-color: transparent;
+}
+.box {
+  width: 290px;
+  margin-top: 5px;
+  
+  
+  text-align: left;
+  margin-left: 10px;
+}
