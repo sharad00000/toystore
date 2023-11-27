@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+//import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { RouterProvider } from 'react-router-dom';
-import router from './Components/Routing';
+//import { RouterProvider } from 'react-router-dom';
+//import router from './Components/Routing';
+import 'react-toastify/dist/ReactToastify.css'
+import App2 from './Components/Routing';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    
+    <App2></App2>
+    {/*<RouterProvider router={router}></RouterProvider>*/}
     {/*<App/>*/}
   </React.StrictMode>
 );

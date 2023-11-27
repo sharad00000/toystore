@@ -13,15 +13,15 @@ import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { Button } from "@mui/material";
+import { userContext } from "./Context";
 
 
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [user, setuser] = React.useContext(userContext);
 
-  const handleChange = (event) => {
-    setAuth(event.target.checked);
-  };
+ 
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -35,9 +35,9 @@ export default function MenuAppBar() {
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.black, 0.15),
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
     "&:hover": {
-      backgroundColor: alpha(theme.palette.common.black, 0.15),
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
     marginLeft: 0,
 
@@ -100,6 +100,8 @@ export default function MenuAppBar() {
             Kiddin' Around
           </Typography>
           
+          <h4 style = {{color : 'white'}}>Hi..Playful {user}</h4>
+          
           
           <Search>
             <SearchIconWrapper>
@@ -112,7 +114,7 @@ export default function MenuAppBar() {
           </Search>
 
           <Link to="/Login">
-            <Button variant="outlined" sx={{ margin: "10px" }}>
+            <Button variant="text"  sx={{ margin: "10px" ,color:"white"}}>
               Login
             </Button>
           </Link>

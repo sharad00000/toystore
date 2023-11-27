@@ -1,0 +1,58 @@
+{
+  "user": [
+    {
+      "fname": "admin1",
+      "lname": "admin2",
+      "uname": "admin",
+      "email": "admin@gmail.com",
+      "pwd": "admin",
+      "cpwd": "admin",
+      "id": 1
+    },
+    {
+      "fname": "sharad",
+      "lname": "s n",
+      "uname": "sharadempire",
+      "email": "sharad@gmail.com",
+      "pwd": "12345",
+      "cpwd": "12345",
+      "id": 2
+    },
+    {
+      "fname": "Ram",
+      "lname": "Ragavendher",
+      "uname": "Ram",
+      "email": "ram@gmail.com",
+      "pwd": "12345",
+      "cpwd": "12345",
+      "id": 3
+    },
+    {
+      "fname": "Santhosh",
+      "lname": "k",
+      "uname": "Santhoshk2003",
+      "email": "santhosh@gmail.com",
+      "pwd": "9003959798",
+      "cpwd": "9003959798",
+      "id": 4
+    },
+    {
+      "fname": "Jaya",
+      "lname": "Kumar",
+      "uname": "DJY",
+      "email": "jaya@gmail.com",
+      "pwd": "12345",
+      "cpwd": "12345",
+      "id": 5
+    },
+    {
+      "fname": "abcd",
+      "lname": "abcd",
+      "uname": "abcd",
+      "email": "abcd@gmail.com",
+      "pwd": "12345",
+      "cpwd": "12345",
+      "id": 6
+    }
+  ]
+}

@@ -3,10 +3,14 @@ import AppBar from "@mui/material/AppBar";
 
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 import { Link } from "react-router-dom";
 
-import { Button } from "@mui/material";
+import { Button, IconButton, Stack } from "@mui/material";
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 export default function MenuApBar() {
   const [auth, setAuth] = React.useState(true);
@@ -24,6 +28,12 @@ export default function MenuApBar() {
     setAnchorEl(null);
   };
 
+  const [age, setAge] = React.useState('');
+
+  const handleChange2 = (event) => {
+    setAge(event.target.value);
+  };
+
   return (
     <AppBar
       elevation={20}
@@ -32,7 +42,7 @@ export default function MenuApBar() {
       style={{
         backgroundColor: "white",
         color: "black",
-        opacity:"90%"
+        opacity:"91%"
         
       }}
     >
@@ -41,7 +51,7 @@ export default function MenuApBar() {
           sx={{ flexGrow: 0, paddingLeft: "30px", marginBottom: "5px" }}
         >
           <Link to="/">
-            <Button color="primary" variant="text">
+            <Button  variant="text" style={{color:"black"}}>
               Home
             </Button>
           </Link>
@@ -50,34 +60,68 @@ export default function MenuApBar() {
           sx={{ flexGrow: 0, paddingLeft: "10px", marginBottom: "5px" }}
         >
           <Link to="/About">
-            <Button color="primary" variant="text">
+            <Button color="primary" variant="text" style={{color:"black"}}>
               About
             </Button>
           </Link>
         </Typography>
-        <Typography
-          sx={{ flexGrow: 0, paddingLeft: "10px", marginBottom: "5px" }}
-        >
-            <Button color="primary" variant="text">
-              Products
-            </Button>
-            </Typography>
             <Typography
           sx={{ flexGrow: 0, paddingLeft: "10px", marginBottom: "5px" }}
         >
-            <Button color="primary" variant="text">
-              Services
+          <Link to="/ContactUs">
+
+            <Button color="primary" variant="text" style={{color:"black"}}>
+              Contact Us
             </Button>
+          </Link>
         </Typography>
-            <Typography
+        <Typography
           sx={{ flexGrow: 1, paddingLeft: "10px", marginBottom: "5px" }}
         >
-            <Button color="primary" variant="text">
-              Others
-            </Button>
+            <FormControl sx={{ m: 1, minWidth: 120 ,color:"black"}} size="small">
+      <InputLabel>Products</InputLabel>
+      <Select>
+        <Stack direction="column">
+        <Link to="/Paintings">
+          <Button variant="text" sx={{color:"black"}}>
+        <MenuItem >Paintings</MenuItem>
+          </Button>
+        </Link>
+        <Link to="/Paintings">
+          <Button variant="text" sx={{color:"black"}}>
+        <MenuItem >Indoor Toys</MenuItem>
+          </Button>
+        </Link>
+        <Link to="/Paintings">
+          <Button variant="text" sx={{color:"black"}}>
+        <MenuItem >Outdoor Toys</MenuItem>
+          </Button>
+        </Link>
+        <Link to="/Paintings">
+          <Button variant="text" sx={{color:"black"}}>
+        <MenuItem >Wooden Toys</MenuItem>
+          </Button>
+        </Link>
+        <Link to="/Paintings">
+          <Button variant="text" sx={{color:"black"}}>
+        <MenuItem >Montessori Toys</MenuItem>
+          </Button>
+        </Link>
+        <Link to="/Paintings">
+          <Button variant="text" sx={{color:"black"}}>
+        <MenuItem >Born Baby Products</MenuItem>
+          </Button>
+        </Link>
+        </Stack>
+      </Select>
+    </FormControl>
+            </Typography>
+          
+        <Typography>
+          <IconButton>
+          <ShoppingCartSharpIcon style={{flexGrow:1,fontSize:"40px",color:"black"}}></ShoppingCartSharpIcon>
+          </IconButton>
         </Typography>
-        
-          <AddShoppingCartIcon style={{marginLedt:"60px",flexGrow:1,fontSize:"40px"}}></AddShoppingCartIcon>
         
       </Toolbar>
     </AppBar>

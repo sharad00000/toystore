@@ -1,0 +1,35 @@
+.Card{
+        margin-top: "10px";
+        margin-left:"10px";
+        margin-right: "10px";
+        margin-bottom: "10px";
+        border: 1px solid #ddd;
+        padding: 10px;
+        transition: transform 0.3s ease-in-out; /* Add smooth transition effect */
+    }
+.Card:hover {
+      transform: scale(0.9); /* Scale the card on hover (you can adjust the scale factor) */
+    }
+.Paper{
+    margin: 0;
+  height: 200vh;
+ 
+  background: linear-gradient(45deg, 
+  rgb(171, 170, 170),rgb(79, 79, 79),rgb(0, 0, 0)
+  );
+  background-size: 400% 200%;
+  animation: gradientAnimation 10s ease infinite;
+}
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+

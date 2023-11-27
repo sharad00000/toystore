@@ -12,7 +12,7 @@
 
 .custom-table td button:hover {
   background-color: #48ff00;
-  color:brown;
+  color:rgb(165, 42, 42);
 }
 .img {
   background-color: transparent;
@@ -24,4 +24,22 @@
   
   text-align: left;
   margin-left: 10px;
+}
+.back{
+  background: linear-gradient(45deg, 
+  rgb(210, 210, 210),rgb(171, 170, 170),rgb(79, 79, 79),rgb(0, 0, 0)
+  );
+  background-size: 500% 200%;
+  animation: gradientAnimation 10s ease infinite;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
